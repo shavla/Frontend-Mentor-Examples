@@ -1,0 +1,24 @@
+#all {
+    height: 100vh;
+    background-size: cover;
+    background-image: url("file:///C:/Users/MScomp/Desktop/f-end%20mentor/intro-component/pic.jpg");
+    background-position: center center;
+}
+.flex {
+    display: flex;
+}
+.aling-center {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.center {
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #all {
+        display: flex;
+        flex-direction: column;
+    }
+}

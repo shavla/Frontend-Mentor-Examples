@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "sourceRoot": "",
+    "sources": [
+        "_base.scss",
+        "_component.scss",
+        "_layout.scss"
+    ],
+    "names": [],
+    "mappings": "AAAA;EACI;EACA;EACA;;;ACHJ;AAAA;EAEI;;;AAEJ;AAAA;EAEI;EACA;EACA;;;AAEJ;EACI;EACA;;;AAEJ;AAAA;EAEI;EACA;EACA;;;AAEJ;EACI;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;;;AAEJ;EACI;EACA;;;AAEJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEJ;EACI;;;AAEJ;EACI;EACA;EACA;;;AAEJ;EACI;EACA;;;AAEJ;EACI;;;AAEJ;EACI;AAAA;IAEI;;;EAEJ;IACI;IACA;;;AAGR;EACI;IACI;IACA;;;EAEJ;IACI;IACA;IACA;;;AC/ER;EACI;EACA;EACA;EACA;;;AAEJ;EACI;;;AAEJ;EACI;EACA;EACA;;;AAEJ;EACI;;;AAGJ;EACI;IACI;IACA",
+    "file": "style.css"
+}

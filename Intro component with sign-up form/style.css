@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#text,
+#form {
+  width: 50%;
+}
+
+#text p,
+#text h1 {
+  text-align: center;
+  margin: 10px 40px;
+  color: red;
+}
+
+#form {
+  margin: 20px 50px;
+  border-radius: 20px;
+}
+
+#formBack,
+#form button {
+  margin-top: 10px;
+  width: 80%;
+  text-align: center;
+}
+
+#formBack {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#form button {
+  height: 40px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: #0000bb;
+  border: none;
+}
+
+#formBack form {
+  width: 100%;
+  margin: 20px 0px;
+}
+
+#formBack input {
+  width: 80%;
+  height: 40px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 20px;
+  display: block;
+  border-radius: 5px;
+  border: 2px solid #dddbdb;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+#formBack p {
+  margin-top: -17px;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+#formBack a {
+  color: #f1a10b;
+  text-decoration: none;
+}
+
+#formBack input:focus {
+  outline: 2px solid #0073f6;
+}
+
+@media (max-width: 600px) {
+  #text,
+#form {
+    width: 100%;
+  }
+
+  #form {
+    margin: 0 auto;
+    margin-top: -15px;
+  }
+}
+@media (max-width: 420px) {
+  #formBack form {
+    margin: 0 auto;
+    margin: 0;
+  }
+
+  #formBack p {
+    margin-top: 2px;
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+}
+#all {
+  height: 100vh;
+  background-size: cover;
+  background-image: url("images/pic.jpg");
+  background-position: center center;
+}
+
+.flex {
+  display: flex;
+}
+
+.aling-center {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  #all {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
