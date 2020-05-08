@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.flex {
+    display: flex;
+}
+.j-content-space-b {
+    justify-content: space-between;
+}
+.flex-direction-column {
+    flex-direction: column;
+}
+#header {
+    background-image: url("./images/bg-hero-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.header-one {
+    margin: 0px 100px;
+    padding: 20px 0px;
+}
+.header-one button {
+    width: 150px;
+    background-color: #fff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    font-weight: bold;
+    outline: none;
+}
+.title {
+    margin: auto 0;
+    padding: 0px 45px;
+}
+.title h1 {
+    margin: 20px 0px;
+}
+.but {
+    margin-top: 20px;
+    width: 200px;
+    height: 45px;
+    background-color: #f052ca;
+    color: #fff;
+    border: none;
+    border-radius: 23px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+.header-two img {
+    width: 90%;
+    height: 90%;
+}
+
+.border {
+    width: 90%;
+    margin: 40px auto 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+}
+#main {
+    margin-top: 50px;
+}
+#main img {
+    width: 90%;
+}
+#main h3 {
+    padding: 10px 0px;
+}
+.main-four {
+    width: 50%;
+    height: 200px;
+    margin-top: 80px;
+    text-align: center;
+    position: relative;
+    bottom: -40px;
+    background-color: #fff;
+}
+.main-four div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: -40px;
+}
+
+#footer {
+    width: 100%;
+    height: 400px;;
+    background-color: rgb(21, 86, 118);
+    color: #fff;
+    z-index: -1;
+}
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+li {
+    padding: 5px;
+}
+.info p {
+    padding: 10px;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+.footer-items {
+    width: 33%;
+    margin: auto 0;
+    padding-left: 40px;
+}
+.icon p {
+    font-size: 11px;
+}
+.icon i {
+    width: 25px;
+    height: 25px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    padding: 5px;
+}
+@media (max-width: 860px) {
+    .header-two, .border {
+      flex-direction: column;
+      text-align: center;
+    }
+    .but {
+        margin: 20px 0px;
+    }
+    .title p {
+        margin: 20px;
+    }
+    #footer {
+        flex-direction: column;
+        height: 600px;
+        padding: 60px 0px;
+    }
+    .footer-items {
+        width: 70%;
+        margin: 20px;
+    }
+    .icon {
+        text-align: center;
+    }
+    .icon p {
+       padding: 40px;
+    }
+  }
