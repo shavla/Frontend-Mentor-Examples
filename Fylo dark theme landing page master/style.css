@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: rgb(28, 36, 49);
+    background-image: url("./images/bg-curvy-desktop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    background-color: rgb(24, 31, 42);
+}
+
+.second-main-img {
+    max-width: 500px;
+}
+
+.second-main a {
+    color: aquamarine;
+    text-decoration: underline;
+}
+
+.each-comments {
+    background-color: rgb(32, 42, 60);
+}
+
+.each-comments img {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.email-sign {
+    margin-bottom: -150px;
+    background-color: rgb(28, 36, 49);
+}
+
+.email-sign-div input {
+    width: 60%;
+}
+
+footer {
+    background-color: rgb(11, 21, 35);
+}
+
+.location {
+    max-width: 500px;
+}
+
+@media (max-width: 800px) {
+    .second-main {
+        flex-wrap: wrap;
+    }
+    .second-main img {
+        margin: auto;
+    }
+    .second-main-img {
+        width: 100%;
+    }
+    .comments {
+        flex-wrap: wrap;
+    }
+    .email-sign-div {
+        flex-wrap: wrap;
+    }
+    .email-sign-div input, .email-sign-div div {
+        width: 100%;
+    }
+    footer {
+        flex-wrap: wrap;
+    }
+}
