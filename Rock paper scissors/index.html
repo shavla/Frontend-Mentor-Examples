@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock, Paper, Scissors</title>
+  <link href="./style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./index.js"></script>
+</head>
+
+<body>
+  <div class="classic">
+    <div class="title flex j-c-space-between">
+      <img src="./images/logo.svg">
+      <div class="score flex f-d-column j-c-center">
+        <h4>SCORE</h4>
+        <p id="result">0</p>
+      </div>
+    </div>
+
+    <div class="buts flex j-c-center">
+      <img src="./images/bg-triangle.svg" class="lines">
+
+      <button onclick="choiceYourPlayer(this)" id="Paper">
+        <img src="./images/icon-paper.svg">
+      </button>
+      <button onclick="choiceYourPlayer(this)" id="Scissors">
+        <img src="./images/icon-scissors.svg">
+      </button>
+      <button onclick="choiceYourPlayer(this)" id="Rock">
+        <img src="./images/icon-rock.svg">
+      </button>
+    </div>
+
+
+    <div class="comparison flex j-c-space-around d-none">
+      <div class="player">
+        <h2>YOU PICKED</h2>
+        <button id="player-Paper" class="d-none" disabled>
+          <img src="./images/icon-paper.svg">
+        </button>
+        <button id="player-Scissors" class="d-none" disabled>
+          <img src="./images/icon-scissors.svg">
+        </button>
+        <button id="player-Rock" class="d-none" disabled>
+          <img src="./images/icon-rock.svg">
+        </button>
+      </div>
+      
+      <div class="again d-none f-d-column">
+        <h1 id="wins"></h1>
+        <button onclick="again()" id="again">PLAY AGAIN</button>
+      </div>
+
+      <div class="computer">
+        <h2>THE HOUSE PICKED</h2>
+        <button id="comp-Paper" class="d-none" disabled>
+          <img src="./images/icon-paper.svg">
+        </button>
+        <button id="comp-Scissors" class="d-none" disabled>
+          <img src="./images/icon-scissors.svg">
+        </button>
+        <button id="comp-Rock" class="d-none" disabled>
+          <img src="./images/icon-rock.svg">
+        </button>
+      </div>
+      
+    </div>
+
+
+    
+    <button onclick="openRules()" id="rules">RULES</button>
+
+    <div class="rules-div f-d-column d-none">
+      <div class="flex j-c-space-between">
+        <h2>RULES</h2>
+        <img src="./images/icon-close.svg" onclick="closeRules()">
+      </div>
+      <img src="./images/image-rules.svg" class="main-rule-img">
+
+    </div>
+  </div>
+
+</body>
+
+</html>
