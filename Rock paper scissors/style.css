@@ -41,13 +41,18 @@
   color: hsl(229, 64%, 46%);
 }
 .score {
+  text-align: center;
   background: hsl(0, 100%, 99%);
   width: 20%;
   align-items: center;
   border-radius: 5px;
 }
 #result {
-  color: hsl(229, 25%, 31%);
+  color: hsl(160, 45%, 46%);
+  font-size: 40px;
+}
+#com-result {
+  color: rgb(253, 63, 63);
   font-size: 40px;
 }
 .lines {
@@ -191,6 +196,9 @@ button:disabled img {
   }
   .comparison {
       margin: 150px 20px 20px 20px;
+  }
+  #result {
+    margin-top: 15px;
   }
 }
 @media only screen and (max-width: 600px){

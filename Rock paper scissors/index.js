@@ -1,7 +1,7 @@
 let oponent = ["Rock", "Paper", "Scissors"];
 
 let score = 0;
-
+let comScore = 0;
 function choiceYourPlayer(obj) {
   console.log(obj.id);
   $(".comparison").css("display", "flex");
@@ -31,12 +31,15 @@ function displayCompMove(player) {
     }
     if (player == "Rock" && comp == "Paper") {
       $("#wins").html("YOU LOSE");
+      ++comScore;
     }
     if (player == "Paper" && comp == "Scissors") {
       $("#wins").html("YOU LOSE");
+      ++comScore;
     }
     if (player == "Scissors" && comp == "Rock") {
       $("#wins").html("YOU LOSE");
+      ++comScore;
     }
   }, 500);
   displayAgain();
@@ -61,6 +64,7 @@ function again() {
   $(".comparison").css("display", "none");
   $(".buts").css("display", "flex");
   $("#result").html(`${score}`);
+  $("#com-result").html(`${comScore}`);
   $(".again").css("display", "none");
 }
 
