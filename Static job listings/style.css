@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flex {
+  display: flex;
+}
+.j-c-space-between {
+  justify-content: space-between;
+}
+.f-d-column {
+  flex-direction: column;
+}
+.head-img {
+  width: 100%;
+  background-color: hsl(180, 29%, 50%);
+  height: 120px;
+}
+#lists {
+  margin-top: -14px;
+  padding: 50px 0px;
+  background-color: hsl(180, 53%, 76%);
+  min-height: 90vh;
+}
+.each-item {
+  width: 80%;
+  margin: 15px auto;
+  background-color: hsl(180, 52%, 96%);
+  padding: 30px;
+  border-radius: 7px;
+  box-shadow: 6px 6px 18px -4px rgba(0, 0, 0, 0.75);
+}
+.true {
+  border-left: 5px solid hsl(180, 14%, 20%);
+}
+.descriptions {
+  width: 100%;
+}
+.description-one {
+  margin-top: 8px;
+  margin-left: 25px;
+}
+.description-one h3 {
+  color: rgb(49, 49, 49);
+  cursor: pointer;
+}
+.description-one h3:hover {
+  color: hsl(180, 29%, 50%);
+}
+.description-one p:first-child {
+  color: hsl(180, 29%, 50%);
+}
+.description-one p:nth-last-child(2) {
+  color: hsl(180, 1%, 59%);
+}
+.spn1 {
+  background: hsl(180, 29%, 50%);
+  font-size: 13px;
+  padding: 4px;
+  border-radius: 12px;
+  color: #fff;
+}
+.spn2 {
+  background: hsl(180, 14%, 20%);
+  font-size: 13px;
+  padding: 4px;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.description-two {
+  margin: auto 0;
+}
+.description-two p {
+  margin: 6px;
+  padding: 5px;
+  background-color: hsl(180, 67%, 88%);
+  border-radius: 4px;
+  color: hsl(180, 29%, 50%);
+  cursor: pointer;
+}
+.description-two p:hover {
+  color: hsl(180, 67%, 88%);
+  background-color: hsl(180, 29%, 50%);
+}
+.filter {
+  width: 80%;
+  height: 55px;
+  visibility: hidden;
+  flex-direction: row-reverse;
+  background: hsl(180, 52%, 96%);
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.clear-button {
+  height: 27px;
+  margin: 14px 40px;
+  border: none;
+  background: hsl(180, 52%, 96%);
+  color: hsl(180, 29%, 50%);
+}
+.clear-button:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.selected-items {
+  margin: 15px 30px;
+}
+.selected-items p {
+  padding: 3px 10px;
+  margin: 0px 5px;
+  background-color: hsl(180, 67%, 88%);
+  border-radius: 4px;
+  color: hsl(180, 29%, 50%);
+  cursor: pointer;
+}
