@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest countries</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="flex j-c-space-around">
+        <h1>
+            Where in the world?
+        </h1>
+        <div>
+            <label id="switch" class="switch">
+                <i class="fa fa-moon-o" aria-hidden="true"></i>
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+            </label>
+            Dark Mode
+        </div>
+    </nav>
+
+    <div class="content">
+        <div class="filter-elements">
+            <div class="filter flex j-c-space-around">
+                <div class="filter-country">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    <input id="search" type="search" placeholder="Search for a country...">
+                </div>
+                <select>
+                    <option selected disabled>Filter by Region</option>
+                    <option value="africa">Africa</option>
+                    <option value="americas">America</option>
+                    <option value="asia">Asia</option>
+                    <option value="europe">Europe</option>
+                    <option value="oceania">Oceania</option>
+                </select>
+            </div>
+            <div class="countries flex f-wrap j-c-center">
+            </div>
+        </div>
+    </div>
+
+    <div class="print-country flex j-c-center">
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="./app.js"></script>
+
+</html>
