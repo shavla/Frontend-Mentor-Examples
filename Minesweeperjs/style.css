@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  flex-direction: column;
+  color: white;
+}
+
+.container {
+  margin-top: 30px;
+  text-align: center;
+}
+.grid {
+  display: flex;
+  background-color: bisque;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+.grid div {
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.bomb {
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+}
+.valid {
+  width: 30px;
+  height: 30px;
+  border: 5px solid;
+  border-color: #f5f3eb #bab7a9 #bab7a9 #fff9db;
+}
+.checked {
+  width: 30px;
+  height: 30px;
+  border: 2px solid;
+  background-color: #cecab7;
+  border-color: #9c998d;
+}
+.flags {
+  margin-bottom: 20px;
+}
+.result__win,
+.result__lose {
+  display: none;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 30px;
+}
+.result__lose {
+  color: red;
+}
+.result__win {
+  color: green;
+}
+.active {
+  display: flex;
+}
+button {
+  margin-top: 15px;
+  width: 140px;
+  height: 35px;
+  font-size: 19px;
+  background: none;
+  border: 1.5px solid bisque;
+  border-radius: 20px;
+  color: bisque;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #20e593;
+  color: #fff;
+  border: none;
+}

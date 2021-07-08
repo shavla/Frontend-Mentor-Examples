@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Minesweeper</title>
+</head>
+
+<body>
+    <div class="level__btns">
+        <button class="beginner">beginner</button>
+        <button class="medium">medium</button>
+        <button class="expert">expert</button>
+    </div>
+
+    <div class="container">
+        <div class="flags">Flags left: <span id='flags-left'></span></div>
+
+        <div class="grid"></div>
+        <div class="result__win">
+            You Win!
+            <p>(*￣▽￣)ノ”(^∇^*)</p>
+            <button class="again">Again</button>
+        </div>
+        <div class="result__lose">
+            You Lose!
+            <p>(ｏ・_・)ノ”(ᴗ_ ᴗ。)</p>
+            <button class="again">Again</button>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
