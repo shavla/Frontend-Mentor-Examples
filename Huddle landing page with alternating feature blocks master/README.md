@@ -1,3 +1,4 @@
+# [Huddle landing page with alternating feature blocks](https://shavla.github.io/Frontend-Mentor-Examples/Huddle%20landing%20page%20with%20alternating%20feature%20blocks%20master/)
 Here are pics of work
 <p align="center">
   <p>Desktop design</p>
