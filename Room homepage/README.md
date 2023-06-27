@@ -1,4 +1,4 @@
-# [Room homepage](https://shavla.github.io/Frontend-Mentor-Examples/Room%20homepage/)
+[Room homepage](https://shavla.github.io/Frontend-Mentor-Examples/Room%20homepage/)
 
 <p align="center">
   <p>Desktop design</p>
