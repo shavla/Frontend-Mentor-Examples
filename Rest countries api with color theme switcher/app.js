@@ -31,7 +31,7 @@ $("#search").on("input", function () {
       for (let i = 0; i < data.length; i++) {
         result += `
         <div class="each-country" onclick="choseCountry(this)">
-          <img src ="${data[i].flag}">
+          <img src ="${data[i].flags.png}">
           <h2>${data[i].name}</h2>
           <p>Population: <span>${commas(data[i].population)}</span></p>
           <p>Region: <span>${data[i].region}</span></p>
@@ -65,7 +65,7 @@ $("select").on("change", function () {
       for (let i = 0; i < data.length; i++) {
         result += `
         <div class="each-country" onclick="choseCountry(this)">
-          <img src ="${data[i].flag}">
+          <img src ="${data[i].flags.png}">
           <h2>${data[i].name}</h2>
           <p>Population: <span>${commas(data[i].population)}</span></p>
           <p>Region: <span>${data[i].region}</span></p>
