@@ -24,7 +24,7 @@ function toggleTheme() {
 $("#search").on("input", function () {
   let name = this.value;
   $.ajax({
-    url: `https://restcountries.eu/rest/v2/name/${name}`,
+    url: `https://restcountries.com/v3.1/name/${name}`,
     dataType: "json",
     success: function (data) {
       let result = "";
@@ -58,7 +58,7 @@ $("#search").on("input", function () {
 $("select").on("change", function () {
   let region = this.value;
   $.ajax({
-    url: `https://restcountries.eu/rest/v2/region/${region}`,
+    url: `https://restcountries.com/v3.1/region/${region}`,
     dataType: "json",
     success: function (data) {
       let result = "";
@@ -85,7 +85,7 @@ function commas(x) {
 function choseCountry(element) {
   let text = [element.innerText][0].split("\n\n");
   $.ajax({
-    url: `https://restcountries.eu/rest/v2/name/${text[0]}`,
+    url: `https://restcountries.com/v3.1/name/${text[0]}`,
     dataType: "json",
     success: function (data) {
       $(".content").css("display", "none");
