@@ -6,13 +6,41 @@
     setTheme("theme-light");
     document.getElementById("slider").checked = true;
   }
+  $.ajax({
+    url: `https://restcountries.com/v3.1/all`,
+    dataType: "json",
+    success: function (data) {
+      let result = "";
+      for (let i = 0; i < data.length; i++) {
+        result += `
+        <div class="each-country" onclick="choseCountry(this)">
+          <img src ="${data[i].flags.png}">
+          <h2>${data[i].name.common}</h2>
+          <p>Population: <span>${commas(data[i].population)}</span></p>
+          <p>Region: <span>${data[i].region}</span></p>
+          <p>Capital: <span>${data[i].capital}</span></p>
+        </div>`;
+      }
+      $(".countries").html(result);
+    },
+    error: function (error) {
+      if ($(".filter-country").has("p")) {
+        $("#error").remove();
+      }
+      $(".filter-country")
+        .append(`<p id="error">no matched country</p>`)
+        .css("color", "red");
+      if (name.length == 0) {
+        $("#error").remove();
+      }
+    },
+    type: "GET",
+  });
 })();
-
 function setTheme(themeName) {
   localStorage.setItem("theme", themeName);
   document.documentElement.className = themeName;
 }
-
 function toggleTheme() {
   if (localStorage.getItem("theme") === "theme-dark") {
     setTheme("theme-light");
@@ -20,7 +48,6 @@ function toggleTheme() {
     setTheme("theme-dark");
   }
 }
-
 $("#search").on("input", function () {
   let name = this.value;
   $.ajax({
@@ -32,7 +59,7 @@ $("#search").on("input", function () {
         result += `
         <div class="each-country" onclick="choseCountry(this)">
           <img src ="${data[i].flags.png}">
-          <h2>${data[i].name}</h2>
+          <h2>${data[i].name.common}</h2>
           <p>Population: <span>${commas(data[i].population)}</span></p>
           <p>Region: <span>${data[i].region}</span></p>
           <p>Capital: <span>${data[i].capital}</span></p>
@@ -54,7 +81,6 @@ $("#search").on("input", function () {
     type: "GET",
   });
 });
-
 $("select").on("change", function () {
   let region = this.value;
   $.ajax({
@@ -66,7 +92,7 @@ $("select").on("change", function () {
         result += `
         <div class="each-country" onclick="choseCountry(this)">
           <img src ="${data[i].flags.png}">
-          <h2>${data[i].name}</h2>
+          <h2>${data[i].name.common}</h2>
           <p>Population: <span>${commas(data[i].population)}</span></p>
           <p>Region: <span>${data[i].region}</span></p>
           <p>Capital: <span>${data[i].capital}</span></p>
@@ -77,11 +103,9 @@ $("select").on("change", function () {
     type: "GET",
   });
 });
-
 function commas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
-
 function choseCountry(element) {
   let text = [element.innerText][0].split("\n\n");
   $.ajax({
@@ -93,11 +117,11 @@ function choseCountry(element) {
       let result = "";
       result += `
         <button onclick="back()"><i class="fa fa-arrow-left" aria-hidden="true"></i> Back</button>
-        <img src ="${data[0].flag}">
+        <img src ="${data[0].flags.png}">
         <div class="flex f-d-column">
           <div class="flex">
             <div>
-              <h2>${data[0].name}</h2>
+              <h2>${data[0].name.common}</h2>
               <p>Native Name: <span>${data[0].nativeName}</span></p>
               <p>Population: <span>${commas(data[0].population)}</span></p>
               <p>Region: <span>${data[0].region}</span></p>
@@ -106,8 +130,8 @@ function choseCountry(element) {
             </div>
             <div>
               <p>Top Level Domain: <span>${data[0].topLevelDomain}</span></p>
-              <p>Currencies: <span>${data[0].currencies[0].name}</span></p>
-              <p>Languages: <span>${languages(data[0].languages)}</span></p>
+              <p>Currencies: <span>${data[0].currencies[Object.keys(data[0].currencies)[0]].name}</span></p>
+              <p>Languages: <span>${data[0].languages[Object.keys(data[0].languages)[0]]}</span></p>
             </div>
           </div>
           <p>Border Countries: <span>${borders(data[0].borders)}</span></p>
@@ -117,7 +141,6 @@ function choseCountry(element) {
     type: "GET",
   });
 }
-
 function languages(obj) {
   let result = "";
   for (let item of obj) {
@@ -125,7 +148,6 @@ function languages(obj) {
   }
   return result.slice(0, -2);
 }
-
 function borders(arr) {
   let result = "";
   for (let item of arr) {
@@ -133,7 +155,6 @@ function borders(arr) {
   }
   return result.slice(0, -2);
 }
-
 function back() {
   $(".content").css("display", "flex");
   $(".print-country").css("display", "none");
