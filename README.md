@@ -13,4 +13,4 @@ Solved examples
 | Social media dashboard with theme switcher | [Live Demo](https://shavla.github.io/Frontend-Mentor-Examples/Social%20media%20dashboard%20with%20theme%20switcher/) |
 | Static job listings | [Live Demo](https://shavla.github.io/Frontend-Mentor-Examples/Static%20job%20listings/) |
 | Head parallax | [Live Demo](https://shavla.github.io/Frontend-Mentor-Examples/head%20parallax/) |
-
+| Rest countries api with color theme switcher | [Live Demo](https://shavla.github.io/Frontend-Mentor-Examples/Rest%20countries%20api%20with%20color%20theme%20switcher/) |
